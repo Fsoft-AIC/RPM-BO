@@ -25,7 +25,7 @@ The geometry-unaware experiments contain in the file [geometry_unaware_synthetic
 #### Example: Running Ackley Mix with D=500, d=15
 
 ```
-python geometry_unaware_synthetic_exp.py --test_func Ackley_Sphere_1 --rep 20 --trial_itr 300 --initial_n 10 --high_dim 500 --effective_dim 15 --proj_dim 15 --update_param 3
+python geometry_unaware_synthetic_exp.py --test_func Ackley_Mix --rep 20 --trial_itr 300 --initial_n 10 --high_dim 500 --effective_dim 15 --proj_dim 15 --update_param 3
 ```
 
 ## LassoBench experiment
