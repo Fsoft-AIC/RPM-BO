@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 ## Geometry-aware synthetic experiment
 
-All the geometry-aware synthetic experiments contain in the file [geometry_aware_synthetic_exp.py](https://github.com/Fsoft-AIC/RPM-BO/blob/master/geometry_aware_synthetic_exp.py)
+The geometry-aware synthetic experiments contain in the file [geometry_aware_synthetic_exp.py](https://github.com/Fsoft-AIC/RPM-BO/blob/master/geometry_aware_synthetic_exp.py)
 
 #### Example: Running Ackley Sphere with D=500, d=10
 
@@ -20,7 +20,7 @@ python geometry_aware_synthetic_exp.py --test_func Ackley_Sphere_1 --rep 20 --tr
 
 ## Geometry-unaware synthetic experiment
 
-All the geometry-unaware experiments contain in the file [geometry_unaware_synthetic_exp.py](https://github.com/Fsoft-AIC/RPM-BO/blob/master/geometry_unaware_synthetic_exp.py)
+The geometry-unaware experiments contain in the file [geometry_unaware_synthetic_exp.py](https://github.com/Fsoft-AIC/RPM-BO/blob/master/geometry_unaware_synthetic_exp.py)
 
 #### Example: Running Ackley Mix with D=500, d=15
 
