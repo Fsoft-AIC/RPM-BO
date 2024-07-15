@@ -29,14 +29,15 @@ class GuA_NN_model():
         """
         Parameters
         ----------
-        d_orig : int
-            Number of dimensions for the orginal dimensional subspace
-        d_embedding: int
-            Number of dimensions for the lower dimensional subspace
-
-        box_size (int): 
-            The box size of the original search space
-       
+        d_orig (int): Number of dimension for original space. 
+        d_embedding (int): Number of dimensions for the lower dimensional subspace
+        hidden_units (int): Number of dimensions for the hidden_units for Neural Network projection
+        box_size (float): The boundary of the search space
+        gamma (float): The weighting factor to balance the supervised loss and the unsupervised cosistency loss
+        p (int): Number of random lambda in Equation (7)
+        q (int): Number of random point in Equation (7)
+        initial_points_list (np.array((num_init, d_orig))): List of initial points
+        initial_random_samples (int): If initial_points_list is None, random initial_random_samples initial points
         """
         if initial_points_list is None:
             self.initial_random_samples = initial_random_samples

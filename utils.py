@@ -125,26 +125,7 @@ class InvGammaPrior(Prior, InverseGamma):
     def __call__(self, *args, **kwargs):
         return super(InverseGamma, self).__call__(*args, **kwargs)
 
-    '''
-    Sample in a low-dimensional linear embedding, to initialize ALEBO.
-    Generates points on a linear subspace of [-1, 1]^D by generating points in
-    [-b, b]^D, projecting them down with a matrix B, and then projecting them
-    back up with the pseudoinverse of B. Thus points thus all lie in a linear
-    subspace defined by B. Points whose up-projection falls outside of [-1, 1]^D
-    are thrown out, via rejection sampling.
-    To generate n points, we start with nsamp points in [-b, b]^D, which are
-    mapped down to the embedding and back up as described above. If >=n points
-    fall within [-1, 1]^D after being mapped up, then the first n are returned.
-    If there are less than n points in [-1, 1]^D, then b is constricted
-    (halved) and the process is repeated until there are at least n points in
-    [-1, 1]^D. There exists a b small enough that all points will project to
-    [-1, 1]^D, so this is guaranteed to terminate, typically after few rounds.
-    Args:
-        B: A (dxD) projection down.
-        nsamp: Number of samples to use for rejection sampling.
-        init_bound: b for the initial sampling space described above.
-        seed: seed for UniformGenerator
-'''
+    
 
 def get_fitted_model(train_x, train_obj, covar_module, likelihood, update_param, state_dict=None):
     # initialize and fit model

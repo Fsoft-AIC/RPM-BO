@@ -26,17 +26,12 @@ class GA_sphere_model():
         """
         Parameters
         ----------
-        original_boundaries ((D, 2) np.array): Boundaries of the original search
-            space (of dimension D). This is used for rescaling. The first column
-            is the minimum value for the corresponding dimension/row, and the
-            second column is the maximum value.
-        n_keep_dims (int): Number of dimensions in the original space that are
-            preserved in the embedding. This is used if certain dimensions are
-            expected to be independently relevant. Assume that these dimensions
-            are the first parameters of the input space.
-        d_embedding: int
-            Number of dimensions for the lower dimensional subspace
-        box_size (int): the boundary of the search space
+        d_orig (int): Number of dimension for original space. 
+        d_embedding (int): Number of dimensions for the lower dimensional subspace
+        d_embedding_sphere (int): Number of dimensions for the effective spherical manifold
+        box_size (float): the boundary of the search space
+        initial_points_list (np.array((num_init, d_orig))): List of initial points
+        initial_random_samples (int): If initial_points_list is None, random initial_random_samples initial points
         """
         if initial_points_list is None:
             self.initial_random_samples = initial_random_samples
