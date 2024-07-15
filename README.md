@@ -30,7 +30,7 @@ python geometry_unaware_synthetic_exp.py --test_func Ackley_Mix --rep 20 --trial
 
 ## LassoBench experiment
 
-The LassoBench experiments contain in the file [laso_exp.py](https://github.com/Fsoft-AIC/RPM-BO/blob/master/lasso_exp.py)
+The LassoBench experiments contain in the file [lasso_exp.py](https://github.com/Fsoft-AIC/RPM-BO/blob/master/lasso_exp.py)
 
 #### Example: Running Lasso Hard with D=1000
 
